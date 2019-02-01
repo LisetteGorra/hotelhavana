@@ -21,12 +21,16 @@
 
 			//end of drop down update
 
-
-
-			var roomsListed = "<form> <select id='bookedRoom'>";
-			for (var i = 0; i < this.roomNumbersBooked.length; i++) {
-				roomsListed += "<option value=" + this.roomNumbersBooked[i] + ">" + this.roomNumbersBooked[i] + "</option>";
-			}
+			// var roomsListed = "<form> <select id='bookedRoom'>";
+			// for (var i = 0; i < this.roomNumbersBooked.length; i++) {
+			// 	roomsListed += "<option value=" + this.roomNumbersBooked[i] + ">" + this.roomNumbersBooked[i] + "</option>";
+			// }
+			
+			
+			
+			
+			
+			
 			roomsListed += "</select> </form>";
 			document.getElementById("rmBooked").innerHTML = roomsListed;
 			//update the drop down list of booked
@@ -36,7 +40,7 @@
 	},
 	
 	
-	booRoom: function(){
+	bookRoom: function(){
 	    //only book if one+ is available
 	
 	    if(this.numberOfRoomsAvailable() > 0) {
@@ -46,10 +50,10 @@
 	        this.roomNumbersBooked = this.roomNumbersBooked.concat(this.roomNumbersAvailable.splice(roomNumbersAvailable.indexOf(selectedRoomDD), 1));
 	        
 	        var selectRoomList = "<form> <select id='selectedRoom'>";
-	        for (var i = 0; i < this.roomNumbersAvailable.length, i++);
+	        for (var i = 0; i < this.roomNumbersAvailable.length; i++);
 	        
 	        selectRoomList += "<option value=" + this.roomNumbersAvailable[i] + ">" + this.roomNumbersAvailable[i] + "</option>";
-	    }
+	        }
 	        selectRoomList += "</select> </form>";
 	        
 	        document.getElementById("selectARoom").innerHTML = selectRoomList;
