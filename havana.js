@@ -24,7 +24,7 @@ var hotel = {
 	        // select a room with selected room drop down 
 	        var selectedRoomDD = document.getElementById("selectedRoom").value;
 	        
-	        this.roomNumbersBooked = this.roomNumbersBooked.concat(this.roomNumbersAvailable.splice(roomNumbersAvailable.indexOf(selectedRoomDD), 1));
+	        this.roomNumbersBooked = this.roomNumbersBooked.concat(this.roomNumbersAvailable.splice(this.roomNumbersAvailable.indexOf(selectedRoomDD), 1));
 	        
 	        var selectRoomList = "<form> <select id='selectedRoom'>";
 	        for (var i = 0; i < this.roomNumbersAvailable.length; i++);
@@ -44,4 +44,4 @@ var hotel = {
 	        document.getElementById("rmBooked").innerHTML = roomsListed;
 	        //update the drop down list of booked rooms .. this code updates
 	    }
-	}
+	};
