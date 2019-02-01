@@ -17,4 +17,31 @@ var hotel = {
         return this.roomNumbersAvailable.length + this.roomNumbersBooked.length;
     },
     
-};
+	bookRoom: function(){
+	    //only book if one+ is available
+	
+	    if(this.numberOfRoomsAvailable() > 0) {
+	        // select a room with selected room drop down 
+	        var selectedRoomDD = document.getElementById("selectedRoom").value;
+	        
+	        this.roomNumbersBooked = this.roomNumbersBooked.concat(this.roomNumbersAvailable.splice(roomNumbersAvailable.indexOf(selectedRoomDD), 1));
+	        
+	        var selectRoomList = "<form> <select id='selectedRoom'>";
+	        for (var i = 0; i < this.roomNumbersAvailable.length; i++);
+	        
+	        selectRoomList += "<option value=" + this.roomNumbersAvailable[i] + ">" + this.roomNumbersAvailable[i] + "</option>";
+	        }
+	        selectRoomList += "</select> </form>";
+	        
+	        document.getElementById("selectARoom").innerHTML = selectRoomList;
+	        //end of drop down update
+	        
+	        var roomsListed ="<form> <select id='bookedRoom'>";
+	        for(var i = 0; i < this.roomNumbersBooked.length; i++) {
+	        	roomsListed += "<option value=" + this.roomNumbersBooked[i] + ">" + this.roomNumbersBooked[i] + "</option>";
+            }
+	        roomsListed += "</select> </form>";
+	        document.getElementById("rmBooked").innerHTML = roomsListed;
+	        //update the drop down list of booked rooms .. this code updates
+	    }
+	}
