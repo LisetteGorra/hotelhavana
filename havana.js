@@ -1,10 +1,10 @@
 var hotel = {
-	name: "CareerDevs JavaScript Hotel",
+	name: "Hotel Havana Oh NANANA!",
 	rating: 5.0,
 	roomRate: 325,
-	roomNumbersAvailable: ["101", "102", "103", "104", "105", "106"],
+	roomNumbersAvailable: ["101", "201", "301", "401", "501", "601"],
 	roomNumbersBooked: [],
-	roomType: "Queen",
+	roomType: "Suite",
 
 	numberOfRoomsAvailable: function() {
 		//length of the number of rooms available, returned as an integer (1, 5, 20, etc)
