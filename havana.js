@@ -44,9 +44,8 @@ var hotel = {
 	        document.getElementById("rmBooked").innerHTML = roomsListed;
 	        //update the drop down list of booked rooms .. this code updates
 	    }
-
-      
-    },
+   
+},
     	unBookRoom: function() {
 		if(this.numberOfRoomsBooked() > 0) {
 			
@@ -63,3 +62,30 @@ var hotel = {
 			document.getElementById(selectARoom).innerHTML = selectRoomList;
 			//end of drop down update 
 
+	
+			var roomsListed = "<form> <selected id='bookedRoom'>";
+			for( var i = 0; i < this.roomNumbersBooked.length; i++) {
+				roomsListed += "<option value=" + this.roomNumbersBooked[i] + ">" + this.roomNumbersBooked[i] +"</option>";
+			}
+			roomsListed += "</select> </form>";
+			document.getElementById("rmBooked").innerHTML = roomsListed;
+		}
+    }
+};  	
+
+document.getElementById("hotelName").innerHTML = hotel.name;
+
+//create initial dropdown
+
+var selectRoomList= "<form> <select id='selectedRoom'>";
+for (var i = 0; i < hotel.roomNumbersAvailable.length; i++) {
+    
+    selectRoomList += "<option value+" + hotel.roomNumbersAvailable[i] + ">" + hotel.roomNumbersAvailable[i] + "</option>";
+}
+selectRoomList += "</select> </form>";
+document.getElementById("selectARoom").innerHTML = selectRoomList;
+//end of create drop down list 
+
+
+
+            
