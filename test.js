@@ -12,10 +12,7 @@ var hotel = {
 	},
 
 	numberOfRoomsBooked: function() {
-<<<<<<< HEAD
-=======
 	
->>>>>>> version9.0
 		return this.roomNumbersBooked.length;
 	},
 
