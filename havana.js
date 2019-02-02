@@ -44,6 +44,7 @@ var hotel = {
 	        document.getElementById("rmBooked").innerHTML = roomsListed;
 	        //update the drop down list of booked rooms .. this code updates
 	    }
+
       
     },
     	unBookRoom: function() {
@@ -61,6 +62,4 @@ var hotel = {
 			selectRoomList += "</select> </form>";
 			document.getElementById(selectARoom).innerHTML = selectRoomList;
 			//end of drop down update 
-			
 
-    
